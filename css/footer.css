@@ -1,0 +1,103 @@
+*{
+  padding:0;
+}
+/*FOOTER*/
+
+#footer{
+    padding-top: 80px;
+    padding-bottom:80px;
+   background-image:url("https://www.spinner-wp.egenslab.com/wp-content/themes/spinner/includes/theme-options/images/footer/Footer-Background.png");
+}
+#menu-company{
+    color:white;
+    text-decoration: none;
+}
+#menu-item-2059{
+    color: white;
+}
+#footer-bottom{
+    padding-top: 50px;
+    
+}
+/*arrow animation*/
+.menu a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-left: 20px; /* Initial padding for aesthetic spacing */
+  transition: color 0.5s ease;
+  text-decoration: none;
+  color: white; /* Default text color */
+}
+
+.menu .arrow {
+  position: absolute;
+  left: 0; /* Start at the beginning */
+  opacity: 0; /* Start invisible */
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  transform: translateX(-20px); /* Start from slightly left */
+  color: rgba(230, 0, 76); /* Arrow color */
+  height:20px;
+}
+
+.menu .link-text {
+  padding-left: 5px; /* Space between arrow and text */
+  transition: transform 0.5s ease;
+}
+
+.menu a:hover .arrow,
+.menu a:focus .arrow {
+  transform: translateX(0); /* Arrow moves right */
+  opacity: 1; 
+}
+
+.menu a:hover .link-text,
+.menu a:focus .link-text {
+  transform: translateX(20px); /* Text moves right */
+  color: rgba(230, 0, 76); 
+}
+
+/*icons*/
+#footer-icon{
+  margin-right:8px;
+  padding:2px 2px;
+  color:rgba(230, 0, 76);
+}
+#footer-bottom-text{
+  font-weight: 400;
+  font-family: "poppins";
+}
+
+#email{
+  background-color: black;
+  color: white; 
+  border: 2px solid rgb(255, 255, 255); 
+  padding-right: 10px;
+  border-radius: 5px;
+  border:none;
+  margin-right: 5px;
+}
+#send-button {
+  position: relative;
+  border: 1px solid grey;
+  border-radius: 2px;
+  background-color: rgba(230, 0, 76);
+  padding: 3px 6px;
+  color: white;
+  transition: transform 0.3s ease; 
+}
+
+#send-button svg {
+  transition: transform 0.3s ease; 
+}
+
+#send-button:hover svg {
+  transform: rotate(360deg); 
+}
+
+#email::placeholder{
+  color: rgba(255, 255, 255,0.4) ;
+  justify-content: center;
+  text-align: center;
+}

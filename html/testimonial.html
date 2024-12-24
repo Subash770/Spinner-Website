@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home-4 Spinner Clone</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="https://www.spinner-wp.egenslab.com/wp-content/themes/spinner/includes/theme-options/images/logo/favicons.png">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;500&display=swap">
+    <!-- Font Awesome and Boxicons -->
+    <link rel="stylesheet" href="https://www.spinner-wp.egenslab.com/wp-content/themes/spinner/assets/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://www.spinner-wp.egenslab.com/wp-content/themes/spinner/assets/css/all.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  
+    <style>
+    
+      #testimonial {
+        background-color: #000000;
+        background: linear-gradient(to bottom, black 50%, white 30%);
+        overflow: hidden;
+      }
+      
+      #container-testimonial {
+        width: 40%;
+        max-width: 600px;
+        margin: 0 auto 0 30px; /* Added 100px top margin to move down */
+        padding-top: 20px;
+        background-color: white;
+        border-radius: 5px 5px 0px 0px;
+        box-shadow: 3px 4px 5px 1px;
+      }
+      
+      #slider-testimonial {
+        width: 100%;
+        height: 250px; /* Reduced height */
+        position: relative;
+      }
+      
+      #owl-carousel #item{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+        position: relative;
+        margin: 10px;
+      }
+      
+      #owl-carousel #item img {
+        max-width: 60px;
+        height: auto;
+        margin-right: 10px;
+      }
+      
+      #owl-carousel #item #text-wrapper {
+        flex: 1;
+      }
+      
+      #owl-carousel #item #text-wrapper h6 {
+        font-size: 18px; /* Adjusted font size */
+        font-weight: bold;
+        margin: 0 0 5px;
+      }
+      
+      #owl-carousel #item #text-wrapper span {
+        font-size: 16px; /* Adjusted font size */
+        color: #888;
+        margin: 0 0 10px;
+      }
+      
+      #owl-carousel #item #feedback {
+        font-size: 16px; /* Adjusted font size */
+        color: #333;
+        margin: 10px 0 0;
+      }
+      
+      #custom-owl-nav {
+        position: relative;
+        bottom: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        z-index: 1;
+        padding-left: 400px;
+      }
+      
+      #custom-owl-nav #owl-prev,
+      #custom-owl-nav #owl-next {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+      
+      #custom-owl-nav #owl-prev:hover,
+      #custom-owl-nav #owl-next:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+      
+      #custom-owl-nav  #owl-prev::before,
+      #custom-owl-nav  #owl-next::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 20px;
+      }
+      
+      #custom-owl-nav #owl-prev::before {
+        content: "\f053";
+      }
+      
+      #custom-owl-nav #owl-next::before {
+        content: "\f054";
+      }
+      
+      #count-1 {
+        background-color: rgb(96, 96, 96);
+        color: white;
+        border-radius: 5px;
+      }
+      
+      #count-box {
+        top: -550px; /* Adjusted positioning */
+        left: 650px;
+        display: flex;
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+      }
+      
+    </style>
+</head>
+<body>
+
+<div>
+<section class="testimonial" id="testimonial"> 
+    <div class="p-5">
+        <span class="text-white ">-Testimonial-</span>
+        <h1 class=" text-white ">Our Client Feedback</h1>
+   
+  <!--testimoniual-->
+  <div class="container-testimonial d-flex pt-5 pb-5 m-5 " id="container-testimonial">
+      <div class="slider-testimonial" id="slider-testimonial">
+        <div class="owl-carousel owl-theme" id="owl-carousel">
+          <div class="item" id="item">
+            <div class="author-img d-flex">
+              <img src="https://www.spinner-wp.egenslab.com/wp-content/uploads/2022/09/client21.png" alt="Image 1">
+              <div class="author-details p-2">
+                <h6>Masud Rana</h6>
+                <span style="padding-right:130px;">Area Manager</span>
+              </div>
+              <svg  xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none"><g opacity="0.3"><path d="M36.7507 36.75C37.795 36.75 38.7965 36.3352 39.5349 35.5967C40.2733 34.8583 40.6882 33.8568 40.6882 32.8125V23.1971C40.6882 22.1528 40.2733 21.1513 39.5349 20.4129C38.7965 19.6745 37.795 19.2596 36.7507 19.2596H31.2854C31.2854 17.8776 31.3681 16.4916 31.5296 15.1095C31.7737 13.6448 32.1832 12.3414 32.7502 11.2035C33.3211 10.0616 34.0535 9.16781 34.9512 8.51419C35.8451 7.78181 36.983 7.41563 38.369 7.41563V1.3125C36.0892 1.3125 34.0968 1.80075 32.384 2.77725C30.6861 3.74385 29.2263 5.07853 28.1118 6.68325C26.9933 8.45243 26.1688 10.3912 25.6706 12.4241C25.1685 14.6676 24.9228 16.9607 24.9382 19.2596V32.8125C24.9382 33.8568 25.353 34.8583 26.0914 35.5967C26.8299 36.3352 27.8314 36.75 28.8757 36.75H36.7507ZM13.1257 36.75C14.17 36.75 15.1715 36.3352 15.9099 35.5967C16.6483 34.8583 17.0632 33.8568 17.0632 32.8125V23.1971C17.0632 22.1528 16.6483 21.1513 15.9099 20.4129C15.1715 19.6745 14.17 19.2596 13.1257 19.2596H7.66043C7.66043 17.8776 7.74312 16.4916 7.90456 15.1095C8.14868 13.6448 8.55818 12.3414 9.12518 11.2035C9.69612 10.0616 10.4285 9.16781 11.3262 8.51419C12.2201 7.78181 13.358 7.41563 14.744 7.41563V1.3125C12.4642 1.3125 10.4718 1.80075 8.75899 2.77725C7.06109 3.74385 5.60129 5.07853 4.48681 6.68325C3.36826 8.45243 2.54383 10.3912 2.04556 12.4241C1.54347 14.6676 1.29777 16.9607 1.31318 19.2596V32.8125C1.31318 33.8568 1.72802 34.8583 2.46645 35.5967C3.20487 36.3352 4.20639 36.75 5.25068 36.75H13.1257Z" fill="#27AE60"></path></g></svg>
+            </div>
+            <div id="text-wrapper">
+              <p id="feedback">You have been absolutely wonderful for Kinship Center, & I can't thank you enough for all your tremendous skills, support and patience specially during our merger. You will always be Kinship Center's vendor of choice! Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+          </div>
+
+          <div class="item" id="item">
+            <div class="author-img d-flex">
+              <img src="https://www.spinner-wp.egenslab.com/wp-content/uploads/2022/09/client22.png" alt="Image 2">
+              <div class="author-details p-2">
+                <h6>Faruk Ahmed Tithu</h6>
+                <span style="padding-right:100px;">Product Manager</span>
+              </div>
+              <svg  xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none"><g opacity="0.3"><path d="M36.7507 36.75C37.795 36.75 38.7965 36.3352 39.5349 35.5967C40.2733 34.8583 40.6882 33.8568 40.6882 32.8125V23.1971C40.6882 22.1528 40.2733 21.1513 39.5349 20.4129C38.7965 19.6745 37.795 19.2596 36.7507 19.2596H31.2854C31.2854 17.8776 31.3681 16.4916 31.5296 15.1095C31.7737 13.6448 32.1832 12.3414 32.7502 11.2035C33.3211 10.0616 34.0535 9.16781 34.9512 8.51419C35.8451 7.78181 36.983 7.41563 38.369 7.41563V1.3125C36.0892 1.3125 34.0968 1.80075 32.384 2.77725C30.6861 3.74385 29.2263 5.07853 28.1118 6.68325C26.9933 8.45243 26.1688 10.3912 25.6706 12.4241C25.1685 14.6676 24.9228 16.9607 24.9382 19.2596V32.8125C24.9382 33.8568 25.353 34.8583 26.0914 35.5967C26.8299 36.3352 27.8314 36.75 28.8757 36.75H36.7507ZM13.1257 36.75C14.17 36.75 15.1715 36.3352 15.9099 35.5967C16.6483 34.8583 17.0632 33.8568 17.0632 32.8125V23.1971C17.0632 22.1528 16.6483 21.1513 15.9099 20.4129C15.1715 19.6745 14.17 19.2596 13.1257 19.2596H7.66043C7.66043 17.8776 7.74312 16.4916 7.90456 15.1095C8.14868 13.6448 8.55818 12.3414 9.12518 11.2035C9.69612 10.0616 10.4285 9.16781 11.3262 8.51419C12.2201 7.78181 13.358 7.41563 14.744 7.41563V1.3125C12.4642 1.3125 10.4718 1.80075 8.75899 2.77725C7.06109 3.74385 5.60129 5.07853 4.48681 6.68325C3.36826 8.45243 2.54383 10.3912 2.04556 12.4241C1.54347 14.6676 1.29777 16.9607 1.31318 19.2596V32.8125C1.31318 33.8568 1.72802 34.8583 2.46645 35.5967C3.20487 36.3352 4.20639 36.75 5.25068 36.75H13.1257Z" fill="#27AE60"></path></g></svg>
+            </div>
+            <div  id="text-wrapper">
+              <p id="feedback">You have been absolutely wonderful for Kinship Center, & I can't thank you enough for all your tremendous skills, support and patience specially during our merger. You will always be Kinship Center's vendor of choice! Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+    <!-- Custom navigation arrows -->
+    <div class="custom-owl-nav" id="custom-owl-nav">
+      <div class="owl-prev" id="owl-prev"></div>
+      <div class="owl-next" id="owl-next"></div>
+    </div>
+
+     <!--countbox-->    <div class="d-flex" id="count-box">
+  <div class="row d-block m-2">
+    <div class="count-1 p-4 m-2" id="count-1">
+      <h3 id="count1" data-count="450+">450+</h3>
+      <h6>Projects</h6>
+    </div>
+    <div class="count-1 p-4 m-2" id="count-1">
+      <h3 id="count2" data-count="963+">963+</h3>
+      <h6>Success</h6>
+    </div>
+  </div>
+  <div class="row d-block m-2">
+    <div class="count-1 p-4 m-2" id="count-1">
+      <h3 id="count3" data-count="50+">50+</h3>
+      <h6>Customers</h6>
+    </div>
+    <div class="count-1 p-4 m-2" id="count-1">
+      <h3 id="count4" data-count="50+">50+</h3>
+      <h6>Awards</h6>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+
+  </div>
+</section>
+    
+</div>
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+  //testimonial
+  $(document).ready(function(){
+    var owl = $("#owl-carousel").owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 3000, // Autoplay interval in milliseconds
+      autoplayHoverPause: true,
+      nav: false, // Hide default navigation
+      dots: false, // Hide default dots
+    });
+
+    // Custom navigation events
+    $("#owl-prev").click(function(){
+      owl.trigger("prev.owl.carousel");
+    });
+    $("#owl-next").click(function(){
+      owl.trigger("next.owl.carousel");
+    });
+  });
+
+  //counting numbersdocument.addEventListener('DOMContentLoaded', () => {
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function animateCount(element, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const currentCount = Math.floor(progress * (end - start) + start);
+      element.innerText = currentCount;
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+
+  function checkCounters() {
+    const counters = document.querySelectorAll('[data-count]');
+    counters.forEach(counter => {
+      if (isInViewport(counter)) {
+        const targetCount = parseInt(counter.getAttribute('data-count'), 10);
+        animateCount(counter, 0, targetCount, 2000);
+        counter.dataset.finalCount = targetCount; // Store final count in dataset
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkCounters);
+  checkCounters(); // Initial check in case elements are already in view
+
+  // Add event listener for animation end to append '+' sign
+  document.addEventListener('animationend', function (event) {
+    const element = event.target;
+    if (element.matches('[data-final-count]')) {
+      element.innerText = element.dataset.finalCount + '+';
+    }
+  });
+
+
+</script>
+
+</body>
+</html>

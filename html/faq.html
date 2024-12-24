@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <!-- Bootstrap CDN link (you can replace with your local Bootstrap file) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3dd31b;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .card {
+            border: none;
+        }
+        .faq-item {
+            cursor: pointer;
+            margin-bottom: 10px;
+            background-color: rgb(216, 250, 240);
+            padding: 10px;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+            position: relative;
+        }
+        .faq-answer {
+            display: none;
+            margin-top: 0px;
+            color: #555;
+            background-color: #ffe6e6; /* pale red background */
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .faq-item:hover {
+            background-color: #2ecc71; /* green background */
+            color: white; /* white text */
+        }
+        .faq-item::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            transition: transform 0.3s ease-in-out;
+            padding: 5px;
+        }
+        .faq-item.active::after {
+            content: '-';
+        }
+        .container-custom {
+            max-width: 1200px;
+        }
+        .col-custom-left {
+            padding-right: 15px;
+        }
+        .col-custom-right {
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 container-custom">
+        <div class="row">
+            <div class="col-md-4 col-lg-3 col-custom-left">
+                <div class="card shadow p-3">
+                    <div class="card-body">
+                        <h2 class="card-title">Frequently Asked Questions</h2>
+                        <div>
+                            <a href="#more-section" class="button">Work Together</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-9 col-custom-right">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="faq-item shadow p-3"><strong>01. Curious about how to build your own UX strategy? Here are five simple steps.</strong></li>
+                            <div class="faq-answer">Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, libero ex hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit amet condimentum erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper.</div>
+                            
+                            <li class="faq-item shadow p-3"><strong>02. Where Could a Career in UX Take You? Agency vs. In-House vs. Freelance?</strong></li>
+                                <div class="faq-answer">Donec scelerisque ut tellus at congue. Aenean viverra tincidunt velit, nec commodo Donec quis tellus eros. Nunc faucibus leo et pellentesque porta. Integer placerat ur molestie volutpat. Maecenas rutrum urna faucibus auctor hendrerit. Suspendisse si venenatis, venenatis nisi vel, malesuada justo. Vestibulum ultrices diam nibh, sit amlacus ornare a adonil gornara fitana.</div>
+                            
+                            <li class="faq-item shadow p-3"><strong>03. What Is a Problem Statement in UX? And How To Write One?</strong></li>
+                                <div class="faq-answer">Donec scelerisque ut tellus at congue. Aenean viverra tincidunt velit, nec commodo Donec quis tellus eros. Nunc faucibus leo et pellentesque porta. Integer placerat ur molestie volutpat. Maecenas rutrum urna faucibus auctor hendrerit. Suspendisse si venenatis, venenatis nisi vel, malesuada justo. Vestibulum ultrices diam nibh, sit amlacus ornare a adonil gornara fitana.</div>
+                            
+                            <li class="faq-item shadow p-3"><strong>04. There are several techniques UX designers employ to arrive at a succinct ?</strong></li>
+                                <div class="faq-answer">Donec scelerisque ut tellus at congue. Aenean viverra tincidunt velit, nec commodo Donec quis tellus eros. Nunc faucibus leo et pellentesque porta. Integer placerat ur molestie volutpat. Maecenas rutrum urna faucibus auctor hendrerit. Suspendisse si venenatis, venenatis nisi vel, malesuada justo. Vestibulum ultrices diam nibh, sit amlacus ornare a adonil gornara fitana.</div>
+                            
+                            <li class="faq-item shadow p-3"><strong>05. What are the obstacles users are facing? What are they trying to do?</strong></li>
+                                <div class="faq-answer">Donec scelerisque ut tellus at congue. Aenean viverra tincidunt velit, nec commodo Donec quis tellus eros. Nunc faucibus leo et pellentesque porta. Integer placerat ur molestie volutpat. Maecenas rutrum urna faucibus auctor hendrerit. Suspendisse si venenatis, venenatis nisi vel, malesuada justo. Vestibulum ultrices diam nibh, sit amlacus ornare a adonil gornara fitana.</div>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js CDN (optional, for Bootstrap JavaScript components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.faq-item').click(function() {
+                $(this).toggleClass('active');
+                $(this).next('.faq-answer').slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>
